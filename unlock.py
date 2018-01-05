@@ -35,10 +35,9 @@ def main():
     # pretty_print_POST(prepared)
     # r = s.send(prepared)
     s.headers.update({'X-UserToken': '284b16d8db6f07400c9d69c3ca9619106c229d6aabe9de30f05f5497afb8c9c689bdc257'})
-    r = s.post('https://citrix.service-now.com/xmlhttp.do', data=payload, cookies=s.cookies)
+    r = s.post('https://citrix.service-now.com/xmlhttp.do', data=payload)
     print 'headers:'
     pprint.pprint(r.request.headers)
-    pprint.pprint(r.request.body)
     print r.text
 
 if __name__ == '__main__':
